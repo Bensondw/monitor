@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+
+{% block title %}
+
+Sign Up
+
+{% endblock title %}
+
+{%block navbar%}
+
+    {% if user.is_authenticated %}
+        <li>Welcome {{ user.username }} !!!</li>       
+    {% endif %}
+
+   <li><a href="/login">Login</a></li>
+   <li><a href="/signup">Signup</a></li>
+   <!-- <li><a href="/logout">Logout</a></li> -->
+
+{% endblock navbar%}
+
+   
+
+
+{%block sidenav%}
+
+   <li><a href="/login">Login</a></li>
+   <li><a href="/signup">Signup</a></li>
+
+{% endblock sidenav%}
+
+{% block content %}
+
+
+	<h3>Please use your preffered email address as username</h3>
+
+  <form method="post">
+   
+    {% csrf_token %}
+    {{ form.as_p }}
+
+    <button class="teal" type="submit">Sign Up</button>
+    
+  </form>
+
+{% endblock content %}

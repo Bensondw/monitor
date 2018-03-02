@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<HTML>
+
+  <head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>{% block title %}{% endblock title %}</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+    <!-- <script type="text/javascript" src="/account/js/materialize.min.js"></script> -->
+
+    {% block headerScripts %}{% endblock headerScripts %}
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- <link type="text/css" rel="stylesheet" href="../css/materialize.min.css"  media="screen,projection"/> -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+  </head>
+
+  <body>
+
+    <div name="navigation div">
+
+      <nav class="teal" role="navigation">
+
+        <div class="nav-wrapper container">
+
+          <a id="logo-container" href="/index" class="brand-logo">Hype</a>
+
+          <ul class="right hide-on-med-and-down">
+
+                {%block navbar%}{% endblock navbar%}
+
+
+            <!-- <li><a href="#">Navbar Link</a></li> -->
+            <!-- <li>just some text</li> -->
+
+          </ul>
+
+          <ul id="nav-mobile" class="side-nav">
+
+                {%block sidenav%}{% endblock sidenav%}
+
+
+            <!-- <li><a href="#">Navbar Link</a></li> -->
+
+          </ul>
+
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+        </div>
+
+      </nav>
+
+    </div>
+
+
+
+    {%block content%}{% endblock content%}
+
+  
+
+
+
+  	<div class="row">
+      <!-- <div class="col s8 offset-s2">
+        
+      </div> -->
+  		
+      <div class="col s12">
+        
+      </div>
+
+  	</div>
+
+    <div class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+          {%block content1%}{% endblock content1%}
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="https://i.imgur.com/35Lun7R.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  
+
+
+  <div class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="https://i.imgur.com/kmw0vqM.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+  <div class="row">
+      <!-- <div class="col s8 offset-s2">
+        
+      </div> -->
+      
+      <div class="col s12">
+        {%block content2%}{% endblock content2%}
+      </div>
+
+  </div>
+
+
+ <div class="parallax-container">
+    <div class="section no-pad-bot">
+      <div class="container">
+        <div class="row center">
+          <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
+        </div>
+      </div>
+    </div>
+    <div class="parallax"><img src="https://i.imgur.com/VG2UvcY.jpg" alt="Unsplashed background img 3"></div>
+  </div>
+
+<div class="row">
+      <!-- <div class="col s8 offset-s2">
+        
+      </div> -->
+      
+      <div class="col s12">
+        {%block content3%}{% endblock content3%}
+      </div>
+
+  </div>
+
+
+
+
+  
+
+    <script>
+      
+      (function($){
+        $(function(){
+
+          $('.button-collapse').sideNav();
+          $('.parallax').parallax();
+
+        }); // end of document ready
+      })(jQuery); // end of jQuery name space
+
+    </script>
+
+  </body>
+
+</HTML>
